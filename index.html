@@ -8,6 +8,12 @@
 	<body>
 		<h1>"art"</h1>
 		<div id="test"></div>
+		<div class="image1">
+			<img src="css/nyc.jpg">
+		</div>
+		<div class="image2">
+			<img src="img/ppl.jpg">
+		</div>
 		<audio loop id="player" autoplay="true" src="sound/whatsnecessary.mp3"></audio>
 		
 
@@ -19,14 +25,21 @@
 		<script src="./js/departure-board.js"></script>
 		<script>
 
-			
 					var board = new DepartureBoard (document.getElementById ('test'), { rowCount: 1, letterCount: 26*4+1 }); 
-					
-					board.setValue (['what\'s necessary\, seattle\? what\'s necessary\, seattle\? what\'s necessary\, seattle\?']);
 				
-					window.setTimeout (function () {
-					 	board.setValue ('your life your life your life your life');
-					}, 12000);
+					function changeValues() {
+						board.setValue (['what\'s necessary\? what\'s necessary\? what\'s necessary\? what\'s necessary\? what\'s necessary\? what\'s necessary\? what\'s necessary\? what\'s necessary\? what\'s necessary\? what\'s necessary\? what\'s necessary\? what\'s necessary\? what\'s necessary\?']);
+					
+						window.setTimeout (function () {
+						 	board.setValue ('your life your life your life your life your life your life your life your life your life your life your life your life your life');
+						}, 12000);
+					}
+					window.onload = changeValues();
+					window.setInterval(changeValues, 24000);
+
+				
+
+
 				
 
 
