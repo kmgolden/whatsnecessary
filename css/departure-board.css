@@ -95,7 +95,7 @@ button:active{
 .image1{
 	position: absolute;
 	width: 19.1%;
-	top: 84%;
+	bottom: 0;
 	left: -4%;
 	z-index: -100000;
 
